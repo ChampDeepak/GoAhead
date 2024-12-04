@@ -28,7 +28,7 @@ To run this project locally:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/champdeepak/BeAhead.git
+   git clone https://github.com/ChampDeepak/GoAhead
    cd BeAhead
    ```
 
