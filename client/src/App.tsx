@@ -9,25 +9,28 @@ import SignUp from "./pages/SignUp";
 import Questionnaire from "./pages/Questionnaire";
 import Dashboard from "./pages/Dashboard";
 import Analysis from "./pages/Analysis";
+import { GoogleOAuthProvider } from "@react-oauth/google";
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="/questionnaire" element={<Questionnaire />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/analysis" element={<Analysis />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
+    <GoogleOAuthProvider clientId="327481316158-3mdgmgjtke0lb9jguo9khnijocr7fdlj.apps.googleusercontent.com">
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<SignUp />} />
+            <Route path="/questionnaire" element={<Questionnaire />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/analysis" element={<Analysis />} />
+          </Routes>
+        </BrowserRouter>
+      </TooltipProvider>
+    </GoogleOAuthProvider>
   </QueryClientProvider>
 );
 
